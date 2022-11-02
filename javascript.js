@@ -14,19 +14,19 @@ function getRandomInt(min, max){//calculating random number from min(inclusive) 
 function giveResult(playerSelection , computerSelection){
 
   if(playerSelection.toUpperCase() == computerSelection){
-    console.log("DAMN ! that's a draw");
+    console.log("\nDAMN ! that's a draw");
     return 0;
   }
 
   if(playerSelection.toUpperCase() == "ROCK")
   {
     if(computerSelection == "PAPER"){
-      console.log("You Lose! Paper beats Rock");
+      console.log("\nYou Lose! Paper beats Rock");
       return computer++;
     }
 
     else{
-      console.log("You Win! Rock beats Scissors");
+      console.log("\nYou Win! Rock beats Scissors");
       return player++;
     }
   }
@@ -34,12 +34,12 @@ function giveResult(playerSelection , computerSelection){
   if(playerSelection.toUpperCase() == "PAPER")
   {
     if(computerSelection == "SCISSORS"){
-      console.log("You Lose! Scissors beats Paper");
+      console.log("\nYou Lose! Scissors beats Paper");
       return computer++;
     }
 
     else{
-      console.log("You Win! Paper beats Rock");
+      console.log("\nYou Win! Paper beats Rock");
       return player++;
     }
   }
@@ -47,19 +47,19 @@ function giveResult(playerSelection , computerSelection){
   if(playerSelection.toUpperCase() == "SCISSORS")
   {
     if(computerSelection == "ROCK"){
-      console.log("You Lose! Rock beats Scissors");
+      console.log("\nYou Lose! Rock beats Scissors");
       return computer++;
     }
 
     else{
-      console.log("You Win! Scissors beats Paper");
+      console.log("\nYou Win! Scissors beats Paper");
       return player++;
     }
   }
 
   else{
-    console.log("Please enter correct value");
-    return -1;
+    console.log("\nPlease enter correct value");
+    return player--;
   }
  }
 
@@ -70,7 +70,7 @@ function game(){ //making the 5 rounds for the game
   {
      let playerSelection = prompt('Enter your choice');//taking the input from user through a prompt here
      let computerSelection = getComputerChoice();//calling computers random choice
-     console.log ("ROUND NUMBER :",i);
+     console.log ("\nROUND NUMBER :",i);
      console.log ("player :",playerSelection.toLowerCase());//printing player's value to console
      console.log ("computer :",computerSelection.toLowerCase());//printing computer's value to console
      giveResult(playerSelection , computerSelection);//takes the result for one round
